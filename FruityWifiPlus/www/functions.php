@@ -51,7 +51,7 @@ function start_monitor_mode($iface) {
     $iface_mon0 = exec("/sbin/ifconfig |grep mon0");
     if ($iface_mon0 == "") {
         $exec = "/usr/bin/sudo /usr/sbin/airmon-ng start $iface";
-        exec("/usr/share/FruityWifi/bin/danger \"" . $exec . "\"", $output);
+        exec("/usr/share/FruityWifiPlus/bin/danger \"" . $exec . "\"", $output);
      }
 
 }
@@ -62,7 +62,7 @@ function stop_monitor_mode($iface) {
     $iface_mon0 = exec("/sbin/ifconfig |grep mon0");
     if ($iface_mon0 != "") {
         $exec = "/usr/bin/sudo /usr/sbin/airmon-ng stop mon0";
-        exec("/usr/share/FruityWifi/bin/danger \"" . $exec . "\"", $output);
+        exec("/usr/share/FruityWifiPlus/bin/danger \"" . $exec . "\"", $output);
     }
 
 }
